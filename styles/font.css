@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "BungeeHairline";
+    src: url("/fonts/BungeeHairline-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BungeeInline";
+    src: url("/fonts/BungeeInline-Regular.ttf");
+    font-display: swap;
+}

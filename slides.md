@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop
+background: /backgrounds/primary-bg.png
 title: 200 shades of angular style guide
 info: |
   ## Angular Style Guide Evolution
@@ -12,328 +12,288 @@ transition: slide-left
 mdc: true
 ---
 
-# 200 shades of angular style guide
+<h1 class="font-[BungeeHairline]">
+200 shades of 
+<img src="/icons/angular-logo.svg" class="inline-block w-16 h-16" />
+<span class="font-[BungeeInline] text-pink-500">angular</span>
+style guide
+</h1>
 
-<div class="text-xl text-gray-500 mt-4">
+<div class="text-xl text-gray-400 mt-4">
   The evolution of Angular's style recommendations
-</div>
-
-<div @click="$slidev.nav.next" class="mt-12 py-1">
-  Press Space for next page <carbon-arrow-right />
-</div>
-
-<div class="abs-br m-6 text-xl">
-  <a href="https://github.com/angular/angular" target="_blank" class="slidev-icon-btn">
-    <carbon-logo-github />
-  </a>
 </div>
 
 <!--
 Welcome to this presentation about the evolution of Angular's style guide.
 -->
 
----
-transition: fade-out
----
-
-# Angular and Consistency
-
-One key argument for using Angular is the consistency it brings to your codebase and how it enforces it so switching from one project to another one is a breeze.
-
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
-
-<!--
-Angular's consistency is one of its strongest selling points for enterprise applications.
--->
 
 ---
-transition: slide-up
+layout: image
+image: /images/gitdiff.png
+backgroundSize: 20em
 ---
 
-# Tools for Angular Development
-
-We are encouraged to write Angular application through 2 tools:
-
-- the Angular CLI, shaping some inner responsabilities and boundaries within an Angular application
-- the official style guide released back in Angular v2.
-
-While some practices have evolved over time, this guide has remained unchanged.
-
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
-
-<!--
-The Angular CLI and style guide have been the two pillars of Angular development practices.
--->
-
 ---
-transition: slide-up
+layout: image-left
+
+# the image source
+image: /images/coding-style-guide-viewer.png
+
+# a custom class name to the content
+class: my-cool-content-on-the-right
 ---
 
-# Evolution of the Style Guide
+<h1 class="font-[BungeeInline] !text-pink-500">Angular coding style guide</h1>
 
-However, both the web platform and the framework have evolved since then, and it was necessary for the style guide to evolve as well.
+<v-click>
 
-But as we create some habits, this new version might affect some of our practices.
+Looking for an opinionated guide to Angular syntax, conventions, and application structure? Step right in. This style guide presents preferred conventions and, as importantly, explains why.
 
-Let's dive into the proposed changes and see how we can adapt to them.
+</v-click>
 
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
-
-<!--
-This sets the stage for our discussion about the Angular style guide evolution.
--->
-
----
-transition: slide-up
----
-
-# The Original Angular Style Guide
-
-The Angular Style Guide has been a cornerstone of Angular development since Angular 2.
-
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
-
-<!--
-The Angular Style Guide has been a fundamental part of the Angular ecosystem since Angular 2.
--->
-
----
-transition: slide-up
----
-
-# Purpose of the Style Guide
+<v-clicks>
 
 - Provide consistency across Angular projects
 - Establish best practices for Angular development
 - Make it easier to onboard new developers
 - Improve code maintainability and readability
 
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
+</v-clicks>
 
-<!--
-The purpose of the Angular Style Guide is to create a consistent development experience across projects.
--->
+---
+layout: quote
+---
+
+<v-click at="+1">
+
+Style Guides require experience building applications with the tools. My style guide for Angular 1 was based on years of experience with Angular 1, collaboration with other Angular experts, and conributions from the Angular core team.
+
+</v-click>
+
+<v-click at="0">
+
+Nobody has the same massive experience with Angular 2, and thus the Angular 2 Style Guide is a work in progress.
+
+</v-click>
+
+
+---
+layout: image
+image: /images/john-papa.png
+---
 
 ---
 transition: slide-up
 ---
 
-# Key Principles of the Style Guide
+<h1 class="font-[BungeeInline] text-pink-500">Angular style guide RFC</h1>
 
-- Follow a consistent file and folder structure
-- Use consistent naming conventions
-- Follow a single responsibility principle
-- Maintain proper encapsulation
-- Optimize for readability
+<v-clicks> 
 
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
+- Make the style guide shorter. The current style guide is 52 (!) pages when printed.
+- Simplify guidance that was overly cumbersome or boilerplate-y
+- Remove most guidance that doesn't meaningfully relate to Angular
+- Focus the style guide more on style choices rather than general Angular best practices
+- Modernize guidance to reflect new features and APIs in the framework
+- Update prior recommendations based on our observations of Angular development in the real world
+
+</v-clicks> 
 
 <!--
-The key principles of the Angular Style Guide help developers create maintainable and readable code.
+Introducing the Angular RFC as a way to understand the motivation to talk about Anfgular style guide, not just a momentum but part ofa bigger and official process.
+-->
+
+
+---
+transition: slide-up
+layout: section
+---
+
+<h1 class="font-[BungeeInline] !text-white"><span class="!text-pink-500">Angular</span> Renaissance</h1>
+
+<!--
+Angular Renaissance is the name given to the period of time where Angular has been evolving a lot.
+If used for Angular 17 release which saw the logo and docs changes, it happened a few versions before, when Angular introduced Standalone API, paving the way for a whole new way of writing Angular applications.
+
+The RFC however not hapenned with Angular 17 released but after Angular 19 one.
+This RFC goal was to reconsider totally the way we write Angular applications and how we can improve it.
+As the style guide stayed unchanged for years, it was a good opportunity to revisit it globally.
 -->
 
 ---
 transition: slide-up
+layout: section
 ---
 
-# Why Update the Style Guide?
+<h2 class="font-[BungeeInline] !text-pink-500">1.</h2>
+<h1 class="font-[BungeeInline] !text-white">Standards</h1>
+<h2 class="font-[BungeeInline] !text-pink-500">VS</h2>
+<h1 class="font-[BungeeInline] !text-white">best practices</h1>
 
-After years of stability, the Angular team recognized the need to update the style guide to reflect modern practices.
-
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
 
 <!--
-After many years without significant updates, the Angular team decided it was time to revisit the style guide.
+The style guide is not a best practices list, it's a set of recommendations that are there to help you write Angular applications.
+It's not a list of do's and don'ts, but a set of recommendations to help you write Angular applications.
+
+Not following the style guide does not make you a bad developer, it just means you have your own style.
+But as the current style guide is quite famous, not following it makes your project harder to maintain and harder to understand for newcomers.
+
+Not following best practices is another story: it's about impacting performance, security, maintainability, readability and more.
+
+A good way to sum up the differences is to say that the style guide is about "how to write Angular code", while best practices are about "how to write good code". Best practices are more related to the API and the framework, while the style guide is more about the code organization and the readability  .
 -->
 
 ---
 transition: slide-up
+layout: section
 ---
 
-# Evolving Ecosystem
+<h2 class="font-[BungeeInline] !text-pink-500">2.</h2>
+<h1 class="font-[BungeeInline] !text-white"><span class="!text-pink-500">Angular</span> only</h1>
 
-The web development landscape has changed significantly:
-
-- Angular has evolved significantly since Angular 2
-- Modern JavaScript/TypeScript features are now widely used
-- Web development best practices have changed
-- Developer expectations have shifted
-
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
-
-<!--
-The JavaScript ecosystem has evolved rapidly since the original style guide was created.
--->
 
 ---
 transition: slide-up
+layout: section
 ---
 
-# Community Feedback
+<h2 class="font-[BungeeInline] !text-pink-500">2.</h2>
+<h1 class="font-[BungeeInline] !text-white">no more<span class="!text-pink-500"> suffixes</span></h1>
 
-The community has been requesting updates to address:
 
-- Outdated conventions
-- Inconsistencies with modern Angular practices
-- Better alignment with TypeScript best practices
-- Support for newer Angular features
-- Simplified file naming conventions
-
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
-
-<!--
-The Angular community has been vocal about the need for updated style guidelines.
--->
-
----
-transition: slide-up
----
-
-# The GitHub Discussion
-
-In October 2023, the Angular team started a [discussion](https://github.com/angular/angular/discussions/58412) about updating the style guide.
-
-```md
-# Angular Style Guide Update
-
-The Angular Style Guide was first published in 2016 and has remained largely unchanged since then. 
-However, both the web platform and the framework have evolved since then, and it's time for the 
-style guide to evolve as well.
+```
+user-profile.component.ts and UserProfileComponent
+user-profile.component.ts and UserProfileComponent
 ```
 
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
+---
+transition: slide-up
+layout: section
+---
 
-<!--
-The Angular team initiated a public discussion to gather feedback on updating the style guide.
--->
+<h2 class="font-[BungeeInline] !text-pink-500">3.</h2>
+<h1 class="font-[BungeeInline] !text-white">get rid of<span class="!text-pink-500"> NGMODULES</span></h1>
+
+
+<v-click>
+
+```
+ng generate @angular/core:standalone
+```
+
+</v-click>
+
+
 
 ---
 transition: slide-up
+layout: section
 ---
 
-# Key Points from the Discussion
+<h2 class="font-[BungeeInline] !text-pink-500">4.</h2>
+<h1 class="font-[BungeeInline] !text-white">Template</h1>
+<h2 class="font-[BungeeInline] !text-pink-500">VS</h2>
+<h1 class="font-[BungeeInline] !text-white">templatesurl</h1>
 
-- The style guide hadn't been significantly updated since 2016
-- Many conventions were outdated or inconsistent with modern practices
-- The community was actively engaged, with over 100 comments
-- Several specific areas were identified for improvement
-- The team proposed a formal RFC process for the changes
+---
+layout: two-cols
+---
 
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
+# TemplateURL
 
-<!--
-The GitHub discussion was very active, showing that the community cares deeply about the style guide and has strong opinions about how it should evolve.
--->
+```ts
+@Component({
+  selector: 'app-hero',
+  standalone: true,
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.css'],
+}))
+export class HeroComponent {}
+```
+
+::right::
+
+# Template
+
+```ts
+@Component({
+  selector: 'app-hero',
+  standalone: true,
+  template: `
+    <h1>Hero</h1>
+    <p>Hero works!</p>
+  `,
+  styles: [`
+    h1 {
+      color: red;
+    }
+  `],
+}))
+export class HeroComponent {}
+```
 
 ---
 transition: slide-up
+layout: section
 ---
 
-# The RFC: Proposed Changes
+<h2 class="font-[BungeeInline] !text-pink-500">5.</h2>
+<h1 class="font-[BungeeInline] !text-white">say yes</h1>
+<h2 class="font-[BungeeInline] !text-pink-500">to</h2>
+<h1 class="font-[BungeeInline] !text-white">HOST & CLASS</h1>
 
-In February 2024, the Angular team published a [Request for Comments (RFC)](https://github.com/angular/angular/discussions/59522) with specific proposed changes to the style guide.
+---
+transition: slide-up
+lyout: section
+---
 
-<style>
-h1 {
-  background-color: #DD0031;
-  background-image: linear-gradient(45deg, #DD0031 10%, #C3002F 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+```ts
+@Component({
+  ...,
+  host: {
+    'role': 'slider',
+    '[attr.aria-valuenow]': 'value',
+    '[class.active]': 'isActive()',
+    '[tabIndex]': 'disabled ? -1 : 0',
+    '(keydown)': 'updateValue($event)',
+  },
+})
+export class CustomSlider {
+  value: number = 0;
+  disabled: boolean = false;
+  isActive = signal(false);
+  updateValue(event: KeyboardEvent) { /* ... */ }
+  /* ... */
 }
-</style>
+```
 
-<!--
-The RFC process allowed the community to provide structured feedback on the proposed changes before they were implemented.
--->
+---
+transition: slide-up
+layout: section
+---
+
+<h2 class="font-[BungeeInline] !text-pink-500">6.</h2>
+<h1 class="font-[BungeeInline] !text-white">say no</h1>
+<h2 class="font-[BungeeInline] !text-pink-500">to</h2>
+<h1 class="font-[BungeeInline] !text-white">onClick</h1>
+
+
+---
+transition: slide-up
+layout: section
+---
+
+<h2 class="font-[BungeeInline] !text-pink-500">7.</h2>
+<h2 class="font-[BungeeInline] !text-white">what about</h2>
+<h1 class="font-[BungeeInline] !text-pink-500">signals</h1>
+
+---
+transition: slide-up
+layout: image
+image: /images/caniuse.png
+---
+
 
 ---
 transition: slide-up
@@ -826,6 +786,19 @@ h1 {
 <!--
 The updated style guide provides clear, practical guidance that developers can apply to improve their Angular projects.
 -->
+
+---
+---
+
+<h1 class="font-[BungeeInline] !text-pink-500">Resources</h1>
+
+- [John Papa Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a2/notes.md)
+
+- [Angular Style Guide RFC](https://github.com/angular/angular/discussions/58412)
+- [Angular Style Guide Summary](https://github.com/angular/angular/discussions/59522)
+
+- [Former Angular style guide](https://github.com/angular/angular/blob/64cfe18dbc833f1e54fceb5090c4b97538cdd9a4/adev/src/content/best-practices/style-guide.md)
+- [New Angular style guide](https://github.com/angular/angular/blob/main/adev/src/content/best-practices/style-guide.md)
 
 ---
 layout: center
