@@ -800,38 +800,18 @@ The updated style guide provides clear, practical guidance that developers can a
 - [Former Angular style guide](https://github.com/angular/angular/blob/64cfe18dbc833f1e54fceb5090c4b97538cdd9a4/adev/src/content/best-practices/style-guide.md)
 - [New Angular style guide](https://github.com/angular/angular/blob/main/adev/src/content/best-practices/style-guide.md)
 
+
 ---
-layout: center
-class: text-center
+layout: two-cols
 ---
 
-# Thank You!
+<img src="/images/qr-code.png" class="w-50 h-50" />
 
-<div class="text-xl text-gray-500 mt-4 mb-8">
-  For more information about the Angular style guide evolution:
-</div>
+::right::
 
-<div class="grid grid-cols-3 gap-4">
-  <div>
-    <h3>Initial Discussion</h3>
-    <a href="https://github.com/angular/angular/discussions/58412" target="_blank" class="text-blue-500">
-      github.com/angular/angular/discussions/58412
-    </a>
-  </div>
-  <div>
-    <h3>RFC Explanation</h3>
-    <a href="https://github.com/angular/angular/discussions/59522" target="_blank" class="text-blue-500">
-      github.com/angular/angular/discussions/59522
-    </a>
-  </div>
-  <div>
-    <h3>Final Implementation</h3>
-    <a href="https://github.com/angular/angular/pull/60809" target="_blank" class="text-blue-500">
-      github.com/angular/angular/pull/60809
-    </a>
-  </div>
-</div>
+<h2 class="font-[BungeeInline] !text-pink-500">GEROME GRIGNON</h2>
 
-<div class="mt-12 text-sm text-gray-400">
-  Presentation created with <a href="https://sli.dev" target="_blank" class="text-gray-400">Slidev</a>
-</div>
+- Angular Devs France leader
+- NG Baguette Conf co-organizer
+- Angular Discord Admin
+- Angular Can I Use creator
