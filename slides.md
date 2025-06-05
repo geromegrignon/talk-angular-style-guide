@@ -205,24 +205,28 @@ layout: two-cols
 
 # TemplateURL
 
+<div class="m-2">
+
 ```ts
 @Component({
   selector: 'app-hero',
-  standalone: true,
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
+  templateUrl: './hero.html',
+  styleUrls: ['./hero.css'],
 }))
-export class HeroComponent {}
+export class Hero {}
 ```
+
+</div>
 
 ::right::
 
 # Template
 
+<div class="m-2">
+
 ```ts
 @Component({
   selector: 'app-hero',
-  standalone: true,
   template: `
     <h1>Hero</h1>
     <p>Hero works!</p>
@@ -233,8 +237,10 @@ export class HeroComponent {}
     }
   `],
 }))
-export class HeroComponent {}
+export class Hero {}
 ```
+
+</div>
 
 ---
 transition: slide-up
@@ -251,14 +257,13 @@ transition: slide-up
 lyout: section
 ---
 
-```ts
+```ts {1-3,8-14|4-5|6|7}
 @Component({
   ...,
   host: {
     'role': 'slider',
     '[attr.aria-valuenow]': 'value',
     '[class.active]': 'isActive()',
-    '[tabIndex]': 'disabled ? -1 : 0',
     '(keydown)': 'updateValue($event)',
   },
 })
@@ -267,7 +272,6 @@ export class CustomSlider {
   disabled: boolean = false;
   isActive = signal(false);
   updateValue(event: KeyboardEvent) { /* ... */ }
-  /* ... */
 }
 ```
 
@@ -280,6 +284,58 @@ layout: section
 <h1 class="font-[BungeeInline] !text-white">say no</h1>
 <h2 class="font-[BungeeInline] !text-pink-500">to</h2>
 <h1 class="font-[BungeeInline] !text-white">onClick</h1>
+
+---
+layout: two-cols
+---
+
+# TemplateURL
+
+<div class="m-2">
+
+```ts
+@Component({
+    selector: 'app-hero',
+    template: `
+    <button (click)="onButtonClick()">Save</button>
+  `,
+    styles: [`
+    h1 {
+      color: red;
+    }
+  `],
+}))
+export class Hero {
+    onButtonClick() {
+        // handle button click
+    }
+}
+```
+
+</div>
+
+::right::
+
+# Template
+
+<div class="m-2">
+
+```ts
+@Component({
+  selector: 'app-hero',
+  template: `
+    <button (click)="save()">Save</button>
+  `,
+}))
+export class Hero {
+    save() {
+        // handle button click
+    }
+}
+```
+
+</div>
+
 
 
 ---
@@ -303,6 +359,7 @@ layout: section
 ---
 
 <h1 class="font-[BungeeInline] !text-pink-500">RFC <span class="!text-white">SUMMARY</span></h1>
+<h3 class="font-[BungeeInline]">April 2025</h3>
 
 
 ---
@@ -310,7 +367,16 @@ transition: slide-up
 layout: section
 ---
 
+<h3 class="font-[BungeeInline]">Goodbye</h3>
 <h1 class="font-[BungeeInline] !text-pink-500">.ng <span class="!text-white">files</span></h1>
+
+<v-click>
+
+```
+user-profile.component.ts => user-profile.ng.ts => user-profile.ts
+```
+
+</v-click>
 
 
 ---
@@ -319,14 +385,13 @@ layout: center
 ---
 
 ```ts
-// hero.ng.ts
+// user-profile.ts
 @Component({
-    selector: 'app-hero',
-    standalone: true,
-    templateUrl: './hero.component.html',
-    styleUrls: ['./hero.component.css'],
+    selector: 'app-user-profile',
+    templateUrl: './user-profile.html',
+    styleUrls: ['./user-profile.css'],
 })
-export class HeroComponent {}
+export class UserProfile {}
 ```
 
 ---
@@ -339,11 +404,7 @@ layout: section
 <v-click>
 
 ```ts
-@Component({ /* ... */ })
-export class UserProfile {
-  private userData = inject(UserData);
-  private user = userData.getCurrent();
-}
+private userApi = inject(UserApi);
 ```
 
 </v-click>
